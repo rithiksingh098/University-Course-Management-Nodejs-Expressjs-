@@ -1,7 +1,7 @@
 var express=require("express");
 var app=express();
 app.set("views","./views");
-app.set("view engine","pug")
+app.set("view engine","ejs")
 app.use(express.urlencoded({extended:true}));
 //for course i will have to make a
 //course are fixed cao, dsa, os, networks, iwp
@@ -27,7 +27,18 @@ app.use(function(req,res,next){
 app.get("/student",function(req,res){
     console.log("get student");
 
-    res.render("htfile",{
+    console.log(req.query);
+    console.log(req.url);
+    if(req.query.name=='rithik'){
+        res.render("htmlfile2",{
+            courses:stucourses[0]
+        });
+    }
+});
+app.get("/course",function(req,res){
+    console.log("get course");
+
+    res.render("htmlfile",{
         courses:courses,
         nofstu:nofstu,
         name:req.query.name,
@@ -40,7 +51,7 @@ app.post("/student",function(req,res){
     console.log(req.query);
 
     if(req.query.name=='rithik'){
-        res.render("htffile2",{
+        res.render("htmlfile2",{
             courses:stucourses[0]
         });
     }
@@ -51,15 +62,18 @@ app.post("/course",function(req,res){
 
     console.log(req.body);
     console.log(req.url);
-    
+    console.log(stucourses[0]);
     nofstu[req.body.name1]++;
-    if(req.body.name=='rithik')
+    console.log(req.body.name1);
+    // if(req.body.name=='rithik')
     {
-        stucourses[0].push(courses[req.body.name1]);
+        stucourses[0].push(courses[parseInt(req.body.name1)]);
     }
-    res.render("htfile",{
+    res.render("htmlfile",{
         courses:courses,
-        nofstu:nofstu
+        nofstu:nofstu,
+        name:req.query.name,
+        password:req.query.password
     });
 });
 
