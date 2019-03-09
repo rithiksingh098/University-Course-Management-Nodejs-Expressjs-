@@ -1,0 +1,12 @@
+<html>
+    <h1> Hey,    <%= name%></h1>
+    <h2> This is the list of your registered courses: <h2>
+    <body>
+        <% var i=1; for(i=1;i<courses.length;i++){ %>
+        <p><%= i%> . <%= courses[i]%> <%if(courses[i]>5){%>-active <%}else{ %>-inactive<%}%> </p>
+        <% } %>
+    </body>
+    <form method="POST">
+            <button type='submit' formaction="<%= courseurl %>" >Get to register more courses</button>
+    </form>
+</html>

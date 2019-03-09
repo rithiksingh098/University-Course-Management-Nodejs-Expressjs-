@@ -1,0 +1,65 @@
+<html>
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <body>
+        <h1>Login</h1>
+        <form method="POST" action="/login">
+            <p>
+                <label>Username:</label>
+                <input type="text" class="username" name="username" id="username">
+            </p>
+            <p>
+                <label>Password:</label>
+                <input type="text" class="password" name="password" id="password">
+            </p>
+            <p>
+                <button type="submit" value="login" class="login" id="login" >Login</button>
+            </p>
+        </form>
+        <form method="POST">
+            <button type='submit' formaction="<%= courseurl %>" >Register new Course!</button>
+        </form>
+        <form method="POST">
+            <button type='submit' formaction="<%= studenturl %>" >Your registered courses</button>
+        </form>
+    </body>
+    <script>
+        // var a={"s":'a'};console.log(a);
+        //console.log doesnt work here...
+        // var username=req.body.username;
+        // var username=document.getElementById("username").value;
+        // var strusername=JSON.stringify(username);
+        // var rootusername=HTMLParser.parse(username);
+        // var username=document.querySelector('.username');
+        // var password=document.getElementById("password").value;
+        // var strpassword=JSON.stringify(strpassword);
+        // var rootpassword=HTMLParser.parse(password);
+        // var password=document.querySelector('.password');
+        // var password=req.body.password;
+        // var geturl='/course?name='+strusername+'&password='+strpassword;
+        // var geturl='/course?name='+username+'&password='+password;
+        // var geturl='/course?name='+rootusername+'&password='+rootpassword;
+
+        // var bt=document.getElementById("login");
+
+        //no need for upper code
+
+        // var bt=document.querySelector('.login');
+        // console.log("geturl");
+        // bt.addEventListener('click',function(){
+        //     var username=document.getElementById("username").value;
+        //     var password=document.getElementById("password").value;
+        //     var geturl='/course?name='+username+'&password='+password;
+        //     setTimeout(function() {
+        //         var xmlHttp = new XMLHttpRequest();
+        //         xmlHttp.open( "GET", geturl , true );
+        //         xmlHttp.send(null);
+        //         console.log("geturl");
+        //     }, 3000);
+        // });
+        
+    </script>
+    <!-- <script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script> -->
+</html>
+
+<!-- what i am doing is i will send data to post login and then will make 
+a http request to course endpoint for this i will have to get back to form -->

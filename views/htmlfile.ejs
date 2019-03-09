@@ -1,6 +1,6 @@
 <html>
 <body>
-    <h1><%= name %></h1>
+    <h1>Hey, <%= name %></h1>
     <form name="form1" method="POST" >
     <table>%>
         <% var i=0;
@@ -8,6 +8,13 @@
         <tr>
         <td><%= courses[i] %></td>
         <td><%= nofstu[i]%></td>
+
+        <%if (nofstu[i]<5){%>
+        <td>inactive</td>
+        <%}else{%>
+        <td>active</td>
+        <%}%>
+
         <td><button type="submit" name="name1" value="<%= i %>"  formaction="/course?name=<%= name %>&password=<%= password %>">register</button></td>
         <% } %>
       
