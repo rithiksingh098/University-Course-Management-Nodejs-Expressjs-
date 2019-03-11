@@ -9,7 +9,7 @@ We will be able to perform login by authenticating username and password. Studen
 3. /student - to view all registered courses of the logged in student
 
 ## Features
-1. There can be multiple courses and at least 5 students per course
+1. There can be multiple courses and at least 2 students per course
 2. Students can enroll and un-enroll till a course starts
 3. Simple reports of course based on Active / In-Active
 4. Simple reports to help students look at Courses that they have enrolled for
@@ -18,5 +18,10 @@ We will be able to perform login by authenticating username and password. Studen
 7. Usage of params / Headers in Routes
 8. Form Handling
 9. Only a workable HTML
+
+id-pswds
+rithik-1234
+ankita-12345
+akansha-123456
 
 
