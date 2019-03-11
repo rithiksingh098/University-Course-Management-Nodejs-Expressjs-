@@ -6,7 +6,6 @@ var HTMLParser = require('node-html-parser');
 app.set("views", "./views");
 app.set("view engine", "ejs")
 app.use(express.urlencoded({ extended: true }));
-//for course i will have to make a
 //course are fixed cao, dsa, os, networks, iwp
 var courses = ["cao", "dsa", "os", "networks", "iwp"];
 //course page shows inactive and active
