@@ -2,26 +2,31 @@
 <body>
     <h1>Hey, <%= name %></h1>
     <form name="form1" method="POST" >
-    <table>%>
+    <table>
+
         <% var i=0;
         for(i=0;i<5;i++){ %>
         <tr>
         <td><%= courses[i] %></td>
         <td><%= nofstu[i]%></td>
 
-        <%if (nofstu[i]<5){%>
+        <%if (nofstu[i]<3){%>
         <td>inactive</td>
         <%}else{%>
         <td>active</td>
         <%}%>
 
         <td><button type="submit" name="name1" value="<%= i %>"  formaction="/course?name=<%= name %>&password=<%= password %>">register</button></td>
+        <td><button type="submit" name="name1" value="<%= i + 1000 %>"  formaction="/course?name=<%= name %>&password=<%= password %>">unregister</button></td>
         <% } %>
-      
+        </tr>
     </table>
     </form>   
     <form method="POST">
             <button type="submit" formaction="/student?name=<%= name %>&password=<%= password %>">Your profile</button>
+    </form>
+    <form>
+        <button type='submit' formaction="/login" >Logout!</button>
     </form>
    
 </body>
