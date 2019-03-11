@@ -5,6 +5,5 @@ We will be able to perform login by authenticating username and password. Studen
 
 # Endpoints
 1. /login - to auth by entering the username and password
-2. /course - to view all the courses offered and the number of students registered in the course along with the status of the course(inactive if no. students<3)(active otherwise)
+2. /course - to register and view all the courses offered and the total number of students registered for the course along with the status of the course(inactive if no. students<3)(active otherwise) 
 3. /student - to view all registered courses of the logged in student
-4. /
