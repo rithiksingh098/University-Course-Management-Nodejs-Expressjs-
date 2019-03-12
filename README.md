@@ -1,6 +1,10 @@
 # University-Course-Management-Nodejs-Expressjs-
 We will be able to perform login by authenticating username and password. Students can enroll and un-enroll to the courses.
 
+Note 1- please run this in cmd " npm install xmlhttprequest node-html-parser --save " 
+
+Note 2-Run this in Mozilla Firefox browser
+
 ## Features of the University Course Management System
 
 # Endpoints

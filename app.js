@@ -69,6 +69,7 @@ app.post("/student", function (req, res) {
     if (req.query.name == 'rithik') {
         res.render("student_profile", {
             courses: stucourses[0],
+            coursesparent: courses,
             name: req.query.name,
             nofstu: nofstu,
             courseurl: geturl1,
@@ -78,6 +79,7 @@ app.post("/student", function (req, res) {
     if (req.query.name == 'ankita') {
         res.render("student_profile", {
             courses: stucourses[1],
+            coursesparent: courses,
             name: req.query.name,
             nofstu: nofstu,
             courseurl: geturl1,
@@ -87,6 +89,7 @@ app.post("/student", function (req, res) {
     if (req.query.name == 'akansha') {
         res.render("student_profile", {
             courses: stucourses[2],
+            coursesparent: courses,
             name: req.query.name,
             nofstu: nofstu,
             courseurl: geturl1,
