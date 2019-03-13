@@ -17,13 +17,14 @@ var stucourses = [[], [], []];
 var studurl = "";
 var geturl1 = "";
 var geturl = "";
+
 app.use(function (req, res, next) {
     console.log("middleware" + req.url);
 
     console.log(req.query);
     console.log(req.body);
 
-    if (req.url == "/login") {
+    if (req.url == "/login"|| req.url=="/login?") {
         next();
     }
     else if (req.query.name == 'rithik' && req.query.password == '1234') {

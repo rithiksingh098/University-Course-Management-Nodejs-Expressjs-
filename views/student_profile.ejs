@@ -10,7 +10,9 @@
     <form method="POST">
             <button type='submit' formaction="<%= courseurl %>" >Get to register more courses</button>
     </form>
-    <form>
-        <button type='submit' formaction="/login" >Logout!</button>
+    <form method="GET" action="/login">
+        <button type="submit">
+            Logout
+        </button>
     </form>
 </html>
